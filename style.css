@@ -1,0 +1,240 @@
+
+body{
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ===================== Menu ===================== */
+
+.navbar{
+    background-color: #f7b830;
+    height: 80px;
+}
+
+#carrinho_compras{
+    margin-left: 10px;
+}
+
+.navbar-brand{
+    font-size: 32px;
+}
+
+.nav a.nav-link.active{
+    background-color: #418bba;
+    color: #f7b830;
+}
+
+.nav a.nav-link,
+h1.navbar-brand,
+h1.navbar-brand:hover,
+.nav_cardapio .nav-link.active:hover{
+    color: #16479d;
+}
+
+header > .container{
+    background-color:rgba(247, 184, 48, 0.8);
+    border-radius: 8px;
+}
+
+.navbar-toggler{
+    background-color: #16479d;
+}
+
+
+header #carrinho_compras{
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+/* ===================== Sobre ===================== */
+
+#carousel-exemplo{
+    background-color: rgb(23, 22, 22);
+}
+
+#carousel-exemplo img{
+    height: 420px;
+    width: 100%;
+}
+
+
+.section_title{
+    font-family: 'Pacifico', cursive;
+}
+
+.text_colored{
+    color: #16479d;
+}
+
+#sobre_o_restaurante, #cardapio, #finalizar_compras{
+    background-color:rgba(247, 184, 48, 0.5);
+}
+
+
+#eventos img{
+    height: 250px;
+}
+
+/* ===================== Produtos ===================== */
+
+.nav_cardapio .nav-link.active,
+#fale_conosco button,
+#finalizar_compras button{
+    background-color: #f7b830;
+    color: #16479d;
+}
+
+.nav_cardapio .nav-link:hover{
+    color: #f7b830;
+}
+
+.tab-content img{
+    border-radius: 8px;
+}
+
+/* ===================== Contato ===================== */
+
+.social_links li{
+    list-style: none;
+    display: inline;
+}
+
+.social_links a{
+    text-decoration: none;
+}
+
+.bi-instagram{
+    color: blueviolet;
+}
+
+.bi-whatsapp{
+    color: green;
+}
+
+
+/* ===================== Rodapé ===================== */
+
+.rodape{
+    height: 50px;
+    background-color: #f7b830;
+}
+
+.rodape p{
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #16479d;
+}
+
+
+
+
+
+/*================== Seção de Carrinho ==================*/
+
+
+/*================== Carrinho ==================*/
+
+#finalizar_compras h1{
+    padding: 30px 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.painel_tabela{
+    background-color: #f0f0f0;
+    height: 430px;
+    border-radius: 3px;
+    /* padding: 0px 20px; */
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    position: relative;
+}
+
+table input{
+    width: 75px;
+}
+
+#col_item_nome{
+    width: 40%;
+}
+
+#col_item_qtd{
+    width: 15%;
+}
+
+#col_item_valor{
+    width: 25%;
+}
+
+.deletar_item{
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.item_qtd{
+    display: inline-block;
+    width: 70%;
+}
+
+.item_valor{
+    display: inline-block;
+    width: 70%;
+}
+
+
+thead > tr > th{
+    position: sticky;
+    top: 0;
+    background-color:#f7b830;
+    color: #16479d;
+}
+
+table, th, td{
+    border: 1px solid #cdcbcb;
+    border-collapse: collapse;
+    padding: 5px 3px;
+}
+
+thead, tfoot{
+    background-color:#f7b830;
+    color: #16479d;
+    font-size: 16px;
+    height: 30px;
+}
+
+
+tbody{
+    background-color: #fff;
+    color: #524d4d;
+}
+
+tbody > tr:hover{
+    background-color: #c6e2ff;
+    font-weight: bold;
+}
+
+
+td{
+    font-size: 18px;
+    height: 20px;
+}
+
+tfoot{
+    font-weight: bold;
+}
+
+
+
+/* ===================== Responsividade ===================== */
+
+@media (max-width: 767px) {
+    #carousel-exemplo img{
+        height: 280px;
+    }
+}

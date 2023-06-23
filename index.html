@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link CDN Bootstrap -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+    "> -->
+        <!-- Icones Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- link Bootstrap css local -->
+    <link rel="stylesheet" href="./lib/Bootstrap.min.css">
+    
+    <!-- link CDN jQuery carousel -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+
+    <!-- Fontes personalizadas google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Fonte Roboto + Pacific -->
+    
+    <!-- link Arquivo css local -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- https://via.placeholder.com/100x100 -->
+    <title>Pet Shop</title>
+</head>
+<body>
+    <header id="cabecalho" class="navbar navbar-expand-lg sticky-top p-4" > <!-- Menu -->
+        <div class="container">
+            <h1 class="navbar-brand m-0 section_title">Pet Shop</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav id="menu-navegacao" class="navbar-collapse collapse justify-content-end">
+                <ul class="nav nav-pills d-block pt-3 d-md-flex">
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#sobre_o_restaurante" >
+                            <i class="bi bi-shop me-1"></i>
+                            Sobre</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#eventos" >
+                            <i class="bi bi-calendar-check me-1"></i>
+                            ventos</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#cardapio" >
+                            <i class="bi bi-box-seam-fill me-1"></i>
+                            Produtos</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#fale_conosco" >
+                            <i class="bi bi-chat-text me-1"></i>
+                            Fale conosco</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#finalizar_compras">
+            <button id="carrinho_compras" class="btn btn-primary">
+                <i class="bi bi-cart-check-fill"></i>
+            </button></a>
+        </div>
+    </header>
+
+    
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smoth-scroll="true">
+        <section id="sobre_o_restaurante">
+            <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel"> <!-- Carousel imagens -->
+                <div class="container">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <img src="./images/slides/Pets4.jpg" alt="Foto do espaço interno do restaurante">
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="./images/slides/Pets2.jpg" alt="Duas taças de vinho">
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="./images/slides/Pet1.webp" alt="Uma mesa com comida">
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <img src="./images/slides/PETS-3.jpg" alt="Uma mesa com comida">
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="prev"  class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="next"  class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="3"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-5 pb-5"> <!-- Sobre o ambiente  -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="./images/Pet_Shop_Ambiente.jpg" class="d-block w-100 rounded" alt="Foto do espaço interno do Pet Shop">
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">
+                            <h2 class="section_title">Sobre <span class="text_colored">o Pet Shop</span></h2>
+                            <p>É uma loja voltada para atender às necessidades de animais, oferecendo produtos e serviços diversificados. Nessa loja, pode-se encontrar rações, produtos veterinários, filhotes de animais, além de serviços como banho e tosa, atendimento clínico, hospedagem, transporte, dentre outros.</p>
+                            <h3 class="section_title">Sobre <span class="text_colored">o espaço</span></h3>
+                            <p>
+                                É limpo e higiênico, garantindo a saúde dos animais e dos clientes. Segundo, é um ambiente seguro, com medidas de segurança para prevenir acidentes e proteger os animais e as pessoas. Por fim, promove o bem-estar animal, oferecendo cuidados adequados e espaços tranquilos que minimizam o estresse. Essas qualidades são fundamentais para proporcionar um ambiente saudável e agradável para todos.
+                            </p>
+                            <ul>
+                                <li>Limpeza e higiene</li>
+                                <li>Seguro</li>
+                                <li>Bem-estar animal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventos" class="pt-5 pb-5"> <!-- Eventos  -->
+            <div class="container">
+                <div class="row">
+                    <h2 class="section_title text-center">Eventos <span class="text_colored">semanais</span></h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-5">
+                        <img src="./images/eventos/Sorteio_Casinhas.jpg" alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section_title text_colored fs-4">
+                            <i class="bi bi-shop-window"></i>
+                            Sorteio de casinhas</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quae alias maxime fugiat accusamus eaque maiores nisi veritatis amet corporis illum minima earum et, optio reprehenderit nam nulla vel facere!
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <img src="./images/eventos/Doações_pts.jpg" alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section_title text_colored fs-4">
+                            <i class="bi bi-arrow-through-heart-fill"></i>
+                            Doações</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quae alias maxime fugiat accusamus eaque maiores nisi veritatis amet corporis illum minima earum et, optio reprehenderit nam nulla vel facere!
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <img src="./images/eventos/Tosa_Pets.webp" alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section_title text_colored fs-4">
+                            <i class="bi bi-people-fill"></i>
+                            Tosa campeã</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quae alias maxime fugiat accusamus eaque maiores nisi veritatis amet corporis illum minima earum et, optio reprehenderit nam nulla vel facere!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cardapio" class="pt-5 pb-5"> <!-- Produtos  -->
+            <div class="container">
+                <div class="row">
+                    <h2 class="section_title text-center mb-5">
+                        Nossos <span>Produtos</span>
+                    </h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav nav-pills flex-column nav_cardapio"> <!-- Menu Produtos  -->
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#alimentacao" class="fw-bold text-start nav-link text_colored active">
+                                Alimentação
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#higiene_cuidados" class="fw-bold text-start nav-link text_colored">
+                                Higiene e cuidados
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#acessorios_brinquedos" class="fw-bold text-start nav-link text_colored">
+                                Acessórios e brinquedos
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#saude_bem_estar" class="fw-bold text-start nav-link text_colored">
+                                Saúde e bem-estar
+                            </button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#treinamento_comportamento" class="fw-bold text-start nav-link text_colored">
+                                Treinamento e comportamento
+                            </button>
+                        </nav>
+                    </aside>
+
+                    <div class="col-md-10"> <!-- Categorias Produtos  -->
+                        <div class="tab-content"> 
+                            <div id="alimentacao" class="tab-pane active"> <!-- Alimentação  -->
+                                <div class="row">
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Alimentação/Ração_Aves.webp" alt="">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Ração Aves</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Alimentação/Ração_Coelhos.webp" alt="">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Ração Coelho</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Alimentação/Ração_Golden.webp" alt="">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Ração cachorro adulto Golden</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Alimentação/Ração_Pet_Golden.webp" alt="">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Ração cachorro adulto Pet-Gold</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos//Alimentação/Ração_Pet_Life.webp" alt="">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Ração cachorro adulto/pequeno porte</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Alimentação/Petisco_Cavalos.jpg" alt="">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Coca-Cola</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="higiene_cuidados" class="tab-pane"> <!-- Higiene e cuidados  -->
+                                <div class="row">
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Higiene e cuidados/KIT-CUIDADOS-ESPECIAIS.png" alt="Cerveja">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Shampoo cachorro</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Higiene e cuidados/kit_removedor_Pelos.jpg" alt="Vinho">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Kit Removedor de pelos e alicate para unhas</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/Higiene e cuidados/Limp.png" alt="Vinho">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Kit higiene pet</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="acessorios_brinquedos" class="tab-pane"> <!-- Acessórios e brinquedos  -->
+                                <div class="row">
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/acessorios_brinquedos/Bebedouro.webp" alt="Nome entrada">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Bebedouro + Comedouro</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/acessorios_brinquedos/Bola.webp" alt="Nome entrada">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Bolinha de borracha</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/acessorios_brinquedos/Colera.webp" alt="Nome entrada">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Coleira</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/acessorios_brinquedos/Robo_ração.webp" alt="Nome entrada">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Robô Petisco </h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="saude_bem_estar" class="tab-pane" > <!-- Saúde e bem-estar  -->
+                                <div class="row">
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/saude_bem_estar/drogavet-especial.webp" alt="Pizza">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Colirio canino</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/saude_bem_estar/Escovar_dentes.jpg" alt="Salmão">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Escova para dente canino</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/saude_bem_estar/Ovopet.png" alt="Pizza">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Over Pet</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/saude_bem_estar/palito_saudavel_para_caes_bemestar.webp" alt="Salmão">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Palito comestivel saudável</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/saude_bem_estar/Nex_Gard.webp" alt="Pizza">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Nex Gard</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/saude_bem_estar/billifort_controle_de_enjoo.webp" alt="Salmão">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Billifort</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div id="treinamento_comportamento" class="tab-pane" > <!--Treinamento e comportamento -->
+                                <div class="row">
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/treinamento_comportamento/Anti-latido.jpg" alt="Bolo de chocolate">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Sonar adestrador 30 decibéis</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/treinamento_comportamento/aparelho_treinamento_adestramento.webp" alt="Cupcake">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Sonar adestrador 20 decibéis</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div class="produto_item col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/treinamento_comportamento/Bot-o-de-comunica-o-para-pets.jpg" alt="Cupcake">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Botão comunicador dog</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div>
+                                    <div id="produto_item" class="col-md-3 mb-5">
+                                        <img class="d-block w-100" src="./images/produtos/treinamento_comportamento/ea-jogos.webp" alt="Cupcake">
+                                        <h5 class="produto_item_nome text_colored fw-bold mt-2">Pátio de treinamento interno</h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <span class="preco fw-bold">R$ 50,00</span>
+                                        <button class="add_carrinho btn btn-success d-block">
+                                            <i class="bi bi-cart-check-fill"></i>
+                                            carrinho
+                                        </button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fale_conosco" class="pt-5 pb-5"><!-- Seção de contato -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+                        <form id="formulario_contato"> <!-- Formulario contato -->
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold text_colored">Seu nome:</label>
+                                <input id="nome" class="form-control form-control-md" type="text" name="nome" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold text_colored">Seu e-mail:</label>
+                                <input id="email" class="form-control form-control-md" type="email" name="email" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label fw-bold text_colored">Seu telefone (opcional)</label>
+                                <input id="telefone" class="form-control form-control-md" name="telefone" type="tel" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label fw-bold text_colored">Sua mensagem:</label>
+                                <textarea id="mensagem" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn fw-bold">Enviar</button>
+                        </form>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="row"> <!-- Contato sociais  -->
+                            <h3 class="section_title fs-4 text_colored">
+                                <i class="bi bi-hand-thumbs-up-fill"></i>
+                                Redes sociais</h3>
+                            <ul class="social_links">
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-facebook text_colored"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5 ms-3 me-3">
+                                    <a href="#">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row"> <!-- Endereço  -->
+                            <h3 class="section_title fs-4 text_colored mt-4">
+                                <i class="bi bi-cursor-fill"></i>
+                                Endereço</h3>
+                            <p>
+                                Rua Pets Shop n° 145, Bairro Cat - Araras - AR
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+            </div>
+        </section>
+
+        <section id="finalizar_compras"> <!--Seção carrinho de compras -->
+            <div class="container">
+                <h1 class="text-center text_colored mt-5 mb-5">
+                    <i class="bi bi-wallet-fill"></i>
+                    Finalizar compras
+                </h1>
+                <div class="row">
+                    <div class="col-md-5 mb-5">
+                        <h5>Preencha os dados</h5>
+                        <form id="form_contato_compra"> <!-- Formulario contato compra -->
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold text_colored">Seu nome:</label>
+                                <input id="nome" class="form-control form-control-md" type="text" name="nome" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold text_colored">Seu e-mail:</label>
+                                <input id="email" class="form-control form-control-md" type="email" name="email" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label fw-bold text_colored">Seu telefone</label>
+                                <input id="telefone_carrinho" class="form-control form-control-md" name="telefone_carrinho" type="tel" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label fw-bold text_colored">Sua mensagem:</label>
+                                <textarea id="mensagem" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn fw-bold">Enviar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="col-md-7 mb-5">
+                        <div class="painel_tabela"> <!--Tabela Contato -->
+                            <table id="produto_itens" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th id="col_item_nome">ITEM</th>
+                                        <th id="col_item_preco_unit">PREÇO</th>
+                                        <th id="col_item_qtd">QTD</th>
+                                        <th id="col_item_valor">VALOR</th>
+                                
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr class="linha_registro_carrinho">
+                                        <td>item</td>
+                                        <td class="item_preco_unit">R$ 50,00</td>
+                                        <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
+                                        <td>
+                                            <span class="item_valor">R$ 100,00</span>
+                                            <i class="deletar_item bi bi-trash3-fill"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="linha_registro_carrinho">
+                                        <td>item 2</td>
+                                        <td class="item_preco_unit">R$ 50,00</td>
+                                        <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
+                                        <td>
+                                            <span class="item_valor">R$ 50,49</span>
+                                            <i class="deletar_item bi bi-trash3-fill"></i>
+                                        </td>
+                                        
+                                    </tr>
+                                    
+                                </tbody> -->
+                                <tfoot>
+                                    <tr>
+                                        <td id="qtd_registros">-</td>
+                                        <td>-</td>
+                                        <td id="qtd_total">-</td>
+                                        <td id="valor_total">R$ -</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+
+    
+        
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer> <!-- Rodapé  -->
+        <div class="rodape">
+            <p>&copy; Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+
+    <!-- Script CDN Bootstrap -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="./lib/Bootstrap.bundle.min.js"></script>
+   
+    <!-- Script jquery -->
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- Script jquery carousel Slick -->
+   <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+   <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+   <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+    <!-- Script jquery carousel Mascaras input Validação -->
+   <script src="./lib/jquery.mask.min.js"></script>
+   <script src="./lib/jquery.validate.min.js"></script>
+   <script src="./lib/messages_pt_BR.min.js"></script>
+
+    
+    <!-- Script arquivo JS -->
+   <script src="./script.js"></script>
+</body>
+</html>
