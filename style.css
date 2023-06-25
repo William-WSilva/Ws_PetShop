@@ -155,6 +155,7 @@ table{
     position: relative;
 }
 
+
 table input{
     width: 75px;
 }
@@ -191,43 +192,11 @@ table input{
 thead > tr > th{
     position: sticky;
     top: 0;
-    background-color:#f7b830;
-    color: #16479d;
-}
-
-table, th, td{
-    border: 1px solid #cdcbcb;
-    border-collapse: collapse;
-    padding: 5px 3px;
-}
-
-thead, tfoot{
-    background-color:#f7b830;
-    color: #16479d;
-    font-size: 16px;
-    height: 30px;
 }
 
 
-tbody{
-    background-color: #fff;
-    color: #524d4d;
-}
-
-tbody > tr:hover{
-    background-color: #c6e2ff;
-    font-weight: bold;
-}
 
 
-td{
-    font-size: 18px;
-    height: 20px;
-}
-
-tfoot{
-    font-weight: bold;
-}
 
 
 

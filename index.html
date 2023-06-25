@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- link CDN Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
-    ">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+    "> -->
         <!-- Icones Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- link Bootstrap css local -->
-    <!-- <link rel="stylesheet" href="./lib/Bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./lib/Bootstrap.min.css">
     
     <!-- link CDN jQuery carousel -->
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
@@ -613,44 +613,42 @@
                     
                     <div class="col-md-7 mb-5">
                         <div class="painel_tabela"> <!--Tabela Carrinho -->
-                            <table id="produto_itens" cellspacing="0">
-                                <thead>
+                            <table id="produto_itens" class="table table-bordered table-hover">
+                                <thead class="table-dark">
                                     <tr>
-                                        <th id="col_item_nome">ITEM</th>
-                                        <th id="col_item_preco_unit">PREÇO</th>
-                                        <th id="col_item_qtd">QTD</th>
-                                        <th id="col_item_valor">VALOR</th>
+                                        <th id="col_item_nome" scope="col">ITEM</th>
+                                        <th id="col_item_preco_unit" scope="col">PREÇO</th>
+                                        <th id="col_item_qtd" scope="col">QTD</th>
+                                        <th id="col_item_valor" scope="col">VALOR</th>
                                 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <tr class="linha_registro_carrinho">
-                                        <td>item</td>
-                                        <td class="item_preco_unit">R$ 50,00</td>
+                                    <tr class="linha_registro_carrinho">
+                                        <td>item 1</td>
+                                        <td class="item_preco_unit">R$ 00,00</td>
                                         <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
                                         <td>
-                                            <span class="item_valor">R$ 100,00</span>
+                                            <span class="item_valor">R$ 00,00</span>
                                             <i class="deletar_item bi bi-trash3-fill"></i>
                                         </td>
                                     </tr>
                                     <tr class="linha_registro_carrinho">
                                         <td>item 2</td>
-                                        <td class="item_preco_unit">R$ 50,00</td>
+                                        <td class="item_preco_unit">R$ 00,00</td>
                                         <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
                                         <td>
-                                            <span class="item_valor">R$ 50,49</span>
+                                            <span class="item_valor">R$ 00,00</span>
                                             <i class="deletar_item bi bi-trash3-fill"></i>
                                         </td>
-                                        
                                     </tr>
-                                    
-                                </tbody> -->
-                                <tfoot>
+                                </tbody>
+                                <tfoot class="table-dark">
                                     <tr>
-                                        <td id="qtd_registros">-</td>
+                                        <td id="qtd_registros">2</td>
                                         <td>-</td>
-                                        <td id="qtd_total">-</td>
-                                        <td id="valor_total">R$ -</td>
+                                        <td id="qtd_total">2</td>
+                                        <td id="valor_total">R$ 00,00</td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -659,7 +657,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 
     <footer> <!-- Rodapé  -->
@@ -668,26 +665,24 @@
         </div>
     </footer>
 
-
-    <!-- Script CDN Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="./lib/Bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
-   
     <!-- Script jquery -->
-   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
     <!-- Script jquery carousel Slick -->
-   <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
-   <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-   <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
     <!-- Script jquery carousel Mascaras input Validação -->
-   <script src="./lib/jquery.mask.min.js"></script>
-   <script src="./lib/jquery.validate.min.js"></script>
-   <script src="./lib/messages_pt_BR.min.js"></script>
+    <script src="./lib/jquery.mask.min.js"></script>
+    <script src="./lib/jquery.validate.min.js"></script>
+    <script src="./lib/messages_pt_BR.min.js"></script>
 
-    
+    <!-- Script CDN Bootstrap -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="./lib/Bootstrap.bundle.min.js" crossorigin="anonymous"></script> 
+
     <!-- Script arquivo JS -->
-   <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
