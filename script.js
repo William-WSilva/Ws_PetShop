@@ -8,51 +8,55 @@ let linhas_registros_carrinho = [];
 let total_qtd_carrinho = 0;
 let total_valor_carrinho = 0;
 
-for (let index = 0; index < botoes_add_carrinho.length; index++) {
-  botoes_add_carrinho[index].addEventListener("click", function(event) {
-    const add_produto_item_nome = event.target.parentElement.getElementsByClassName("produto_item_nome")[0].innerText;
-    const add_produto_item_valor = event.target.parentElement.getElementsByClassName("preco")[0].innerText;
-    const add_prodto_item_qtd = 1;
-    const corpotabela = document.querySelector("tbody");
-
-    if (itens_carrinho.includes(add_produto_item_nome)) {
-      console.log("não preencher tabela");
-    } else {
-      console.log("preencher tabela");
-      console.log(add_produto_item_nome);
-
-      itens_carrinho.push(add_produto_item_nome);
-
-      let inputLinha = `
-        <tr class="linha_registro_carrinho">
-          <td>${add_produto_item_nome}</td>
-          <td class="item_preco_unit">${add_produto_item_valor}</td>
-          <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
-          <td>
-            <span class="item_valor">${add_produto_item_valor}</span>
-            <i class="deletar_item bi bi-trash3-fill"></i>
-          </td>
-        </tr>`;
-
-      linhaRegistro += inputLinha;
-      corpotabela.innerHTML = linhaRegistro;
-      linhas_registros_carrinho = document.getElementsByClassName("linha_registro_carrinho");
-      updateTotals();
-      attachInputChangeEvent();
-
-      document.getElementById("carrinho_compras").className = "btn btn-success";
-
-      // Adiciona addEventListener aos inputs de exclusão após a tabela ser preenchida
-      const btn_deletar_item = document.getElementsByClassName("deletar_item");
-      for (let i = 0; i < btn_deletar_item.length; i++) {
-        btn_deletar_item[i].addEventListener("click", function(event) {
-          event.target.parentElement.parentElement.remove();
-          updateTotals();
-        });
+$(window).on("load", function(){
+  for (let index = 0; index < botoes_add_carrinho.length; index++) {
+    botoes_add_carrinho[index].addEventListener("click", function(event) {
+      const add_produto_item_nome = event.target.parentElement.getElementsByClassName("produto_item_nome")[0].innerText;
+      const add_produto_item_valor = event.target.parentElement.getElementsByClassName("preco")[0].innerText;
+      const corpotabela = document.querySelector("tbody");
+  
+      if (itens_carrinho.includes(add_produto_item_nome)) {
+        console.log("não preencher tabela");
+      } else {
+        console.log("preencher tabela");
+        console.log(add_produto_item_nome);
+  
+        itens_carrinho.push(add_produto_item_nome);
+  
+        let inputLinha = `
+          <tr class="linha_registro_carrinho">
+            <td>${add_produto_item_nome}</td>
+            <td class="item_preco_unit">${add_produto_item_valor}</td>
+            <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
+            <td>
+              <span class="item_valor">${add_produto_item_valor}</span>
+              <i class="deletar_item bi bi-trash3-fill"></i>
+            </td>
+          </tr>`;
+  
+        linhaRegistro += inputLinha;
+        corpotabela.innerHTML = linhaRegistro;
+        linhas_registros_carrinho = document.getElementsByClassName("linha_registro_carrinho");
+        updateTotals();
+        attachInputChangeEvent();
+  
+        document.getElementById("carrinho_compras").className = "btn btn-success";
+  
+        // Adiciona addEventListener aos inputs de exclusão após a tabela ser preenchida
+        const btn_deletar_item = document.getElementsByClassName("deletar_item");
+        for (let i = 0; i < btn_deletar_item.length; i++) {
+          btn_deletar_item[i].addEventListener("click", function(event) {
+            event.target.parentElement.parentElement.remove();
+            updateTotals();
+          });
+        }
       }
-    }
-  });
-}
+    });
+  }
+});
+
+
+
 
 function attachInputChangeEvent() {
   for (let index = 0; index < inputs_qtds_itens.length; index++) {
