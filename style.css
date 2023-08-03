@@ -14,6 +14,7 @@ body{
 
 #carrinho_compras{
     margin-left: 10px;
+    margin-bottom: 8px;
 }
 .navbar-brand{
     font-size: 32px;
@@ -38,8 +39,12 @@ header > .container{
 
 .navbar-toggler{
     background-color: #16479d;
+    
 }
 
+.navbar-toggler-icon{
+    background-color: #f7b830;
+}
 
 header #carrinho_compras{
     border-radius: 100%;
