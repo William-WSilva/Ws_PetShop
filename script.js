@@ -3,6 +3,8 @@ const inputs_qtds_itens = document.getElementsByClassName("item_qtd_registro");
 const botoes_add_carrinho = document.getElementsByClassName("add_carrinho");
 const itens_carrinho = [];
 
+const badge = document.querySelector(".badge");
+
 let linhaRegistro = "";
 let linhas_registros_carrinho = [];
 let total_qtd_carrinho = 0;
@@ -40,7 +42,7 @@ $(window).on("load", function(){
         updateTotals();
         attachInputChangeEvent();
   
-        document.getElementById("carrinho_compras").className = "btn btn-success";
+        document.getElementById("carrinho_compras").className = "btn btn-success position-relative";
   
         // Adiciona addEventListener aos inputs de exclusão após a tabela ser preenchida
         const btn_deletar_item = document.getElementsByClassName("deletar_item");
@@ -55,7 +57,7 @@ $(window).on("load", function(){
   }
 });
 
-
+console.log(badge.textContent)
 
 
 function attachInputChangeEvent() {
@@ -86,6 +88,17 @@ function updateTotals() {
   document.getElementById("qtd_registros").innerText = linhas_registros_carrinho.length;
   document.getElementById("qtd_total").innerText = total_qtd;
   document.getElementById("valor_total").innerText = "R$ " + total_valor.toFixed(2).replace(".", ",");
+
+  if (total_qtd > 0 ){
+    badge.classList.remove("invisible")
+    badge.classList.add("visible")
+    badge.innerText = total_qtd
+  }else{
+    badge.classList.add("invisible")
+    badge.classList.remove("visible")
+    badge.innerText = total_qtd
+  }
+
 }
 
 

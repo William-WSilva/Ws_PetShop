@@ -58,8 +58,11 @@
                 </ul>
             </nav>
             <a href="#finalizar_compras">
-            <button id="carrinho_compras" class="btn btn-primary">
+            <button id="carrinho_compras" class="btn btn-primary position-relative">
                 <i class="bi bi-cart-check-fill"></i>
+                <span class="invisible position-absolute start-100 translate-middle badge rounded-pill bg-danger">
+                   0
+                </span>
             </button></a>
         </div>
     </header>
@@ -627,7 +630,7 @@
                                     <tr class="linha_registro_carrinho">
                                         <td>item 1</td>
                                         <td class="item_preco_unit">R$ 00,00</td>
-                                        <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
+                                        <td><input type="number" min="0" value="0" class="item_qtd_registro"></td>
                                         <td>
                                             <span class="item_valor">R$ 00,00</span>
                                             <i class="deletar_item bi bi-trash3-fill"></i>
@@ -636,7 +639,7 @@
                                     <tr class="linha_registro_carrinho">
                                         <td>item 2</td>
                                         <td class="item_preco_unit">R$ 00,00</td>
-                                        <td><input type="number" min="1" value="1" class="item_qtd_registro"></td>
+                                        <td><input type="number" min="0" value="0" class="item_qtd_registro"></td>
                                         <td>
                                             <span class="item_valor">R$ 00,00</span>
                                             <i class="deletar_item bi bi-trash3-fill"></i>
@@ -647,7 +650,7 @@
                                     <tr>
                                         <td id="qtd_registros">2</td>
                                         <td>-</td>
-                                        <td id="qtd_total">2</td>
+                                        <td id="qtd_total">0</td>
                                         <td id="valor_total">R$ 00,00</td>
                                     </tr>
                                 </tfoot>
